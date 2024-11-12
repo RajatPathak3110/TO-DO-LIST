@@ -1,0 +1,218 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+  background-image: url(C:\Users\HP\Downloads\todo.avif);
+}
+
+.todo-container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header Styles */
+.todo-header {
+  font-size: 2.5rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Input and Add Button Container */
+.todo-input-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #5c6bc0;
+}
+
+.todo-btn {
+  padding: 12px 20px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.todo-btn:hover {
+  background-color: #3f51b5;
+}
+
+/* Task List Styles */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  background-color: #d1e7dd;
+}
+
+.task-item .task-text {
+  font-size: 1.1rem;
+  color: #333;
+  flex: 1;
+}
+
+.task-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #5c6bc0;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.task-actions button:hover {
+  color: #3f51b5;
+}
+
+/* Edit, Delete, and Complete Buttons Styles */
+.task-actions .edit-btn {
+  color: #ffa500;
+}
+
+.task-actions .delete-btn {
+  color: #ff3b3f;
+}
+
+.task-actions .complete-btn {
+  color: #28a745;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .todo-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .todo-header {
+    font-size: 2rem;
+  }
+
+  .todo-input {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .todo-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .task-item {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  .task-actions button {
+    font-size: 1.2rem;
+  }
+}
+
+/* Add Animation to Add Button */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Background gradient and subtle effects */
+body {
+  background: linear-gradient(135deg, #f3f4f7, #e8eaf6);
+}
+
+.todo-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.task-item.completed {
+  background-color: #c8e6c9;
+}
+
+/* Light Shadow Effects */
+.task-item {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.task-item:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effects */
+.todo-btn {
+  background-color: #5c6bc0;
+  transition: background-color 0.2s ease;
+}
+
+.todo-btn:hover {
+  background-color: #3949ab;
+}
+
+.task-actions button {
+  transition: transform 0.3s ease;
+}
+
+.task-actions button:hover {
+  transform: scale(1.2);
+}
